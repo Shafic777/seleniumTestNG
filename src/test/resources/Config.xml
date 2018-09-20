@@ -12,7 +12,8 @@
 
     <test name="SampleTest">
         <classes>
-            <class name="com.mycompany.test.SignUpTest"></class>
+            <!--<class naSignUpTestTest"></class>-->
+            <class name="FunctionTest"></class>
         </classes>
     </test>
 </suite>
