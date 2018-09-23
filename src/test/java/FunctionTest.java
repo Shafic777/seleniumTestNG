@@ -17,6 +17,7 @@ public class FunctionTest extends Actions  {
         searchOnHomePage("srp_help_a9b5@testng.com");
         clickOnSearchRecord();
         hoverOnTopLinkByName("Opportunities");
+        clickOnOppertunityRow(1);
         hoverOnTopLinkByName("Program Admission Documents");
         LOG.info("");
     }

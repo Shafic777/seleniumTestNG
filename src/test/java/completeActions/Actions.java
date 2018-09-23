@@ -9,6 +9,7 @@ import pages.*;
  */
 public class Actions extends CommonFunctions {
     private HomePage homePage;
+    private static HoverLinks hoverLinks;
 
     /**
      * This method will use default credentials from property file
@@ -56,8 +57,11 @@ public class Actions extends CommonFunctions {
     }
 
     public void hoverOnTopLinkByName(String nameOfLinkToHover){
-        HoverLinks hoverLinks = new HoverLinks(getWebDriver());
+        hoverLinks = new HoverLinks(getWebDriver());
         hoverLinks.hoverOnLinkByName(nameOfLinkToHover);
-        hoverLinks.oppertunitiesPopup().getRowByIndex(1).clickOnrow();
+    }
+
+    public void clickOnOppertunityRow(int rowNumber){
+        hoverLinks.oppertunitiesPopup().getRowByIndex(rowNumber).clickOnrow();
     }
 }

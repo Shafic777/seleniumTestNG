@@ -38,18 +38,18 @@ public class HoverLinks extends CommonFunctions {
     public class Oppertunities{
         @FindBy (id = "0032a00000TPk6j_00N60000002aLWE_body")
         private WebElement OppertunitiesTable;
-        private WebElement row;
+        private  WebElement row;
         public Oppertunities(RemoteWebDriver driver){
             PageFactory.initElements(driver,this);
         }
 
         public Oppertunities getRowByIndex(int rowIndex){
-          row =  OppertunitiesTable.findElement(By.xpath("//tr[contains(@class, 'dataRow')][position()=" + rowIndex + "]"));
+          row =  waitForElementToAppear(OppertunitiesTable.findElement(By.xpath("//tr[contains(@class, 'dataRow')][position()=" + rowIndex + "]")));
         return this;
         }
 
         public void clickOnrow(){
-            click(row.findElement(By.xpath(".//th[contains(@class,'dataCell')]")));
+            click(row.findElement(By.xpath(".//th[contains(@class,'dataCell')]//a")));
         }
     }
 }
